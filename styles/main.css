@@ -3,8 +3,7 @@ html {
 }
 
 body {
-    background-color: #9c9c9c;
-    /*background-image: ;*/
+    background-color: #ffffff;
     background-repeat: no-repeat;
     background-position: top left;
     background-attachment: fixed;
@@ -14,17 +13,23 @@ body {
     overflow-x: hidden;
 }
 
+@font-face {
+    font-family: customFont;
+    src: url('../fonts/century-gothic.ttf') format('truetype');
+}
+
 p {
     font-size: 14px;
+    font-family: customFont;
 }
 
 a, a:hover, a:focus, a:active, a.active {
-    color: #18bc9c;
+    color: #969696;
     outline: none;
 }
 
 h2 {
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: customFont;
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -38,7 +43,8 @@ section h2 {
 }
 
 footer {
-    color: white;
+    color: #000000;
+    font-family: customFont;
 }
 
 footer h3 {
@@ -57,14 +63,20 @@ footer .footer-bottom {
     padding: 25px 0;
 }
 
-.navbar .navbar-right li a {
+.navbar .navbar-right li a, .navbar .navbar-right li a:hover {
     font-size: 18px;
     color: #000000;
+    font-family: customFont;
 }
 
-.about-container {
-    max-width: 480px;
-    margin: 0 auto;
+.navbar .navbar-header .navbar-brand {
+    font-size: 36px;
+    color: #000000;
+    font-family: customFont;
+}
+
+.navbar .navbar-header .navbar-brand span {
+    color: #969696;
 }
 
 #portfolio .portfolio-item {
@@ -80,7 +92,7 @@ footer .footer-bottom {
 }
 
 #portfolio .portfolio-item .portfolio-link .caption {
-    background: rgba(24, 188, 156, 0.9);
+    background: none;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -104,6 +116,7 @@ footer .footer-bottom {
     margin-top: -12px;
     color: white;
 }
+
 #portfolio .portfolio-item .portfolio-link .caption .caption-content i {
     margin-top: -12px;
 }
@@ -113,8 +126,18 @@ footer .footer-bottom {
     margin: 0;
 }
 
+#portfolio .portfolio-item a, #portfolio .portfolio-item a:hover, #portfolio .portfolio-item a:focus, #portfolio .portfolio-item a:active {
+    font-family: customFont;
+    color: #000000;
+}
+
 #portfolio * {
     z-index: 2;
+}
+
+.about-container {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .btn-social {
@@ -126,7 +149,100 @@ footer .footer-bottom {
     line-height: 45px;
 }
 
-@media (max-width: 767px) {
+.btn-outline {
+    color: #000000;
+    font-size: 20px;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    margin-top: 15px;
+}
+
+.btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
+    color: #000000;
+}
+
+.footer-top .btn-outline {
+    font-size: 32px;
+    margin-top: 0;
+}
+
+.floating-label-form-group {
+    position: relative;
+    margin-bottom: 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.floating-label-form-group input, .floating-label-form-group textarea {
+    z-index: 1;
+    position: relative;
+    border: none;
+    border-radius: 0;
+    font-size: 16px;
+    background: none;
+    box-shadow: none !important;
+    resize: none;
+    color: #000000;
+}
+
+.floating-label-form-group label {
+    display: block;
+    z-index: 0;
+    position: relative;
+    top: 2em;
+    margin: 0;
+    vertical-align: middle;
+    opacity: 0;
+}
+
+.floating-label-form-group:not(:first-child) {
+    padding-left: 14px;
+    border-left: 1px solid #eeeeee;
+}
+
+.floating-label-form-group-with-value label {
+    top: 0;
+    opacity: 1;
+}
+
+.floating-label-form-group-with-focus label {
+    color: #ffffff;
+}
+
+form .row:first-child .floating-label-form-group {
+    border-top: 1px solid #eeeeee;
+}
+
+.footer-bottom .col-lg-12 {
+    font-size: 14px;
+}
+
+.modal-content .modal-body .item-details {
+    font-family: customFont;
+    color: #000000;
+    font-size: 14px;
+}
+
+.modal-content .modal-body .item-details li a,  .modal-content .modal-body .item-details li a:hover {
+    font-family: customFont;
+    color: #000000;
+}
+
+.modal-content .modal-body p {
+    margin: 10px 0 10px;
+}
+
+.modal-content .modal-body .item-details {
+    margin: 10px 0;
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        width: 1024px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 767px) {
     section, header {
         padding: 75px 0 0;
     }
